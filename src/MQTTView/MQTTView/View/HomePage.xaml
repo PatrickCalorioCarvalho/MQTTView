@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MQTTView.View.HomePage"
+             BackgroundColor="#ecf0f5">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="txtstatus" Text="HomePage" />
+            
+            <ListView x:Name="Servidores" ItemSelected="Servidores_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#ecf0f5" Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Servidor}" TextColor="#171336" FontSize="Large"/>
+                                    <Label Text="{Binding Usar}"
+                                    HorizontalOptions="EndAndExpand"
+                                    TextColor="#503026" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnAtualizar" Text="Atualizar"
+                    Clicked="btnAtualizar_Clicked"/>
+            <Button x:Name="btnTestar" Text="Testar"
+                    Clicked="btnTestar_Clicked"/>
+            <Button x:Name="btnConfig" Text="Configuracao"
+                    Clicked="btnConfig_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

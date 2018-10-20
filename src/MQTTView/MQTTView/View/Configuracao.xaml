@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MQTTView.View.Configuracao">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Servidor"></Label>
+            <Entry x:Name="txtServidor"></Entry>
+
+            <Label Text="Porta"></Label>
+            <Entry x:Name="txtPorta"></Entry>
+
+            <Label Text="Usuario"></Label>
+            <Entry x:Name="txtUsuario"></Entry>
+
+            <Label Text="Senha"></Label>
+            <Entry x:Name="txtSenha" IsPassword="True"></Entry>
+
+            <Label Text="Usar"></Label>
+            <Switch x:Name="ckUsar" HorizontalOptions="Start"/>
+            <Button x:Name="btnSalvar" Clicked="btnSalvar_Clicked"  Text="Salvar"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
